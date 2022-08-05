@@ -1,0 +1,13 @@
+<div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-space">
+
+        <strong> <a class="nav-link active"
+          routerLink="/products" >All Products</a>
+        </strong>
+       
+        <a *ngFor="let category of categories" class="p-2 link-secondary"
+      routerLink="/products/category/{{category.id}}" style="text-decoration: none;" >{{category.name}}</a>
+      
+      
+    </nav>
+  </div>

@@ -1,0 +1,82 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 5000,
+      "categoryId": 1,
+      "description": "Lenovo"
+    },
+    {
+      "id": 2,
+      "name": "Phone",
+      "price": 4000,
+      "categoryId": 2,
+      "description": "Iphone"
+    },
+    {
+      "id": 3,
+      "name": "Laptop",
+      "price": 5000,
+      "categoryId": 3,
+      "description": "Lenovo"
+    },
+    {
+      "id": 4,
+      "name": "Phone",
+      "price": 4000,
+      "categoryId": 4,
+      "description": "Iphone"
+    },
+    {
+      "name": "computer",
+      "description": "Asus",
+      "price": "11592",
+      "categoryId": "3",
+      "id": 5
+    },
+    {
+      "name": "machine",
+      "description": "Copy Machine",
+      "price": "10000",
+      "categoryId": "1",
+      "id": 6
+    },
+    {
+      "name": "hoover",
+      "description": "philips",
+      "price": "6000",
+      "categoryId": "5",
+      "id": 7
+    },
+    {
+      "name": "TV",
+      "description": "LG",
+      "price": "15000",
+      "categoryId": "4",
+      "id": 8
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electronic"
+    },
+    {
+      "id": 2,
+      "name": "Music"
+    },
+    {
+      "id": 3,
+      "name": "Computer"
+    },
+    {
+      "id": 4,
+      "name": "TV"
+    },
+    {
+      "id": 5,
+      "name": "Cleaning"
+    }
+  ]
+}

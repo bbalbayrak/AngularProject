@@ -1,0 +1,46 @@
+<h3>Add new product</h3>
+<form #productAddForm="ngForm" (ngSubmit)="add(productAddForm)">
+    <div style="padding: 10px;" class="form-group">
+<input style="padding: 10px;" type="text" placeholder="Product Name" #name="ngModel"
+[(ngModel)]="model.name" 
+class="form-control" name="name" id="name" required>
+<div *ngIf="name.invalid&&name.dirty" class="alert alert-danger"> Product Name Required</div>
+    </div>
+
+    <div style="padding: 10px;" class="form-group">
+        <input type="text" placeholder="Description" #description="ngModel"
+        [(ngModel)]="model.description" 
+        class="form-control" name="description" id="description" required>
+        <div *ngIf="description.invalid&&description.dirty" class="alert alert-danger"> Description Required</div>
+            </div>
+
+            <div style="padding: 10px;" class="form-group">
+              <input style="padding: 10px;" type="text" placeholder="Price" #price="ngModel"
+              [(ngModel)]="model.price" 
+              class="form-control" name="price" id="price" required>
+              <div *ngIf="price.invalid&&price.dirty" class="alert alert-danger"> Price Required</div>
+                  </div> 
+
+            <div style="padding: 10px;" class="form-group">
+                <select class="form-control" #categoryId="ngModel" [(ngModel)]="model.categoryId"
+                required id="categoryId" 
+                name="categoryId">
+                    <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+                </select>
+                <div *ngIf="categoryId.invalid&&categoryId.touched" class="alert alert-danger"> Category Required</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" [disabled]="productAddForm.invalid">Add Product</button>
+            
+</form>
+ 
+<script>
+$(document).ready(function() {
+  $("#danger-alert").hide();
+  $(".form-group").click(function showAlert() {
+    $("#danger-alert").fadeTo(2000, 500).slideUp(500, function() {
+      $("#danger-alert").slideUp(500);
+    });
+  });
+});
+</script> 
